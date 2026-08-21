@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il maresciallo Lacarpia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone-950:#1a1815;
+    --stone-900:#211e19;
+    --stone-800:#332e26;
+    --bone:#ece6d8;
+    --bone-dim:#c9c1ae;
+    --sage:#7c8570;
+    --ember:#a8462f;
+    --ember-bright:#c25b3f;
+    --gold:#b08d4f;
+    --rule: rgba(236,230,216,0.14);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--stone-950);
+    color:var(--bone);
+    font-family:'Literata', serif;
+    font-size:18px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:90px;
+  }
+  a{color:inherit;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 32px;}
+
+  .top{
+    padding:40px 0 0;
+  }
+  a.back{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.06em;
+    color:var(--sage);
+    text-decoration:none;
+  }
+  a.back:hover{color:var(--bone-dim);}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:block;
+  }
+
+  header.hero{padding:36px 0 56px;}
+  header.hero h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-style:italic;
+    font-size:clamp(2.2rem, 6vw, 3.4rem);
+    color:var(--bone);
+    margin-top:14px;
+  }
+
+  .ritratto{
+    width:100%;
+    max-width:320px;
+    aspect-ratio:3/4;
+    background:var(--stone-800);
+    border:1px dashed var(--rule);
+    border-radius:2px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:24px;
+    margin:8px 0 48px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--bone-dim);
+  }
+
+  section{padding:44px 0; border-top:1px solid var(--rule);}
+  section:first-of-type{border-top:none;}
+  section h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-style:italic;
+    font-size:clamp(1.5rem, 3.5vw, 1.9rem);
+    color:var(--bone);
+    margin-bottom:18px;
+  }
+  section p{color:var(--bone-dim);}
+
+  [data-editable="true"]{
+    outline:1px dashed transparent;
+    border-radius:2px;
+    transition:outline-color .15s, background .15s;
+  }
+  [data-editable="true"]:hover{
+    outline-color:var(--rule);
+    background:rgba(236,230,216,0.03);
+  }
+  [data-editable="true"]:focus{
+    outline:1px dashed var(--ember-bright);
+    background:rgba(236,230,216,0.05);
+  }
+
+  .bar{
+    position:fixed;
+    left:0; right:0; bottom:0;
+    background:var(--stone-900);
+    border-top:1px solid var(--rule);
+    padding:16px 32px;
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    align-items:center;
+    flex-wrap:wrap;
+    z-index:10;
+  }
+  button{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    background:var(--ember);
+    color:var(--bone);
+    border:none;
+    padding:12px 22px;
+    border-radius:2px;
+    cursor:pointer;
+  }
+  button:hover{background:var(--ember-bright);}
+  #stato{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--sage);
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap top">
+  <a class="back" href="index.html">← torna al sito</a>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Cronache del maresciallo</span>
+    <h1>Il maresciallo Lacarpia</h1>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="ritratto" data-editable="true">Spazio per un ritratto o un'immagine del maresciallo — sostituiscilo quando ne avrai una</div>
+
+  <section>
+    <h2>Il personaggio</h2>
+    <p data-editable="true">Scrivi qui chi è il maresciallo Lacarpia: aspetto fisico, carattere, modo di parlare, la sua storia prima di arrivare in paese, cosa lo muove.</p>
+  </section>
+
+  <section>
+    <h2>L'ambientazione</h2>
+    <p data-editable="true">Scrivi qui il paese, l'Appennino abruzzese, l'epoca — gli anni Settanta — la Valle Peligna, i luoghi che tornano nelle cronache.</p>
+  </section>
+
+  <section>
+    <h2>Note</h2>
+    <p data-editable="true">Altri appunti, personaggi ricorrenti, atmosfera.</p>
+  </section>
+</div>
+
+<div class="bar">
+  <span id="stato"></span>
+  <button id="scaricaBtn">Scarica la pagina aggiornata</button>
+</div>
+
+<script>
+  document.querySelectorAll('[data-editable="true"]').forEach(el => {
+    el.setAttribute('contenteditable', 'true');
+  });
+
+  document.getElementById('scaricaBtn').addEventListener('click', () => {
+    const clone = document.documentElement.cloneNode(true);
+    clone.querySelectorAll('[data-editable="true"]').forEach(el => {
+      el.removeAttribute('contenteditable');
+    });
+    clone.querySelector('.bar')?.remove();
+    clone.querySelector('script')?.remove();
+
+    const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+    const blob = new Blob([html], {type: 'text/html'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'maresciallo.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    document.getElementById('stato').textContent = 'Scaricato ✓ — ora caricalo su GitHub';
+  });
+</script>
+
+</body>
+</html>
